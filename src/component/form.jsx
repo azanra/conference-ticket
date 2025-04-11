@@ -1,11 +1,11 @@
 import Body from "./body.jsx";
 import Header from "./header.jsx";
 
-export default function Form() {
+export default function Form({ ticket, status }) {
   return (
     <>
       <form>
-        <Header>Your Journey to Coding Conf 2025 Starts Here!</Header>
+        <Header status={status} ticket={ticket} />
         <Body>Secure your spot at next year's biggest coding conference.</Body>
       </form>
     </>
