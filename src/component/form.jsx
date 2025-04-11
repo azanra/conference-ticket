@@ -6,7 +6,7 @@ export default function Form({ ticket, status }) {
     <>
       <form>
         <Header status={status} ticket={ticket} />
-        <Body>Secure your spot at next year's biggest coding conference.</Body>
+        <Body status={status} ticket={ticket} />
       </form>
     </>
   );
