@@ -24,14 +24,19 @@ const template = {
 export default function Form({ ticket, status }) {
   return (
     <>
-      <form>
-        <Header status={status} ticket={ticket} />
-        <Body status={status} ticket={ticket} />
-        <AvatarUpload />
-        <Input template={template.name} />
-        <Input template={template.email} />
-        <Input template={template.github} />
-      </form>
+      <Header status={status} ticket={ticket} />
+      <Body status={status} ticket={ticket} />
+      {status === "draft" ? (
+        <form>
+          <AvatarUpload />
+          <Input template={template.name} />
+          <Input template={template.email} />
+          <Input template={template.github} />
+          <button>Generate My Ticket</button>
+        </form>
+      ) : (
+        <p>Ticket result</p>
+      )}
     </>
   );
 }
