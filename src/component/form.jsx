@@ -2,6 +2,7 @@ import AvatarUpload from "./avatarUpload.jsx";
 import Body from "./body.jsx";
 import Header from "./header.jsx";
 import Input from "./input.jsx";
+import Ticket from "./ticket.jsx";
 
 const template = {
   name: {
@@ -35,7 +36,7 @@ export default function Form({ ticket, status }) {
           <button>Generate My Ticket</button>
         </form>
       ) : (
-        <p>Ticket result</p>
+        <Ticket ticket={ticket} />
       )}
     </>
   );
