@@ -1,9 +1,18 @@
-export default function AvatarUpload() {
+export default function AvatarUpload({ ticket, handleTicket }) {
+  function handleAvatar(e) {
+    const avatarFile = e.target.files[0];
+    const url = URL.createObjectURL(avatarFile);
+    handleTicket({
+      ...ticket,
+      avatar: url,
+    });
+  }
   return (
     <>
       <p>Upload Avatar</p>
       <label htmlFor="">
-        <input type="file" />
+        alt="upload icon"
+        <input type="file" onChange={handleAvatar} />
         <div>
           <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
         </div>
