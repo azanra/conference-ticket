@@ -25,6 +25,17 @@ const template = {
   },
 };
 
+const generateRandomId = (charAmount) => {
+  let randomId = ["#"];
+  const RANDOM_MULTIPLIER = 10;
+  for (let i = 0; i < charAmount; i++) {
+    const randomNumber = Math.round(Math.random() * RANDOM_MULTIPLIER);
+    randomId.push(randomNumber);
+  }
+  const randomNumberString = randomId.join("");
+  return randomNumberString;
+};
+
 export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
@@ -35,6 +46,7 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
           onSubmit={(e) => {
             e.preventDefault();
             setStatus("finished");
+            const ticketId = generateRandomId(5);
           }}
         >
           <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
