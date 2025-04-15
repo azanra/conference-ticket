@@ -25,13 +25,18 @@ const template = {
   },
 };
 
-export default function Form({ ticket, status, handleTicket }) {
+export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
       <Header status={status} ticket={ticket} />
       <Body status={status} ticket={ticket} />
       {status === "draft" ? (
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            setStatus("finished");
+          }}
+        >
           <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
           <Input
             template={template.name}
@@ -48,7 +53,7 @@ export default function Form({ ticket, status, handleTicket }) {
             ticket={ticket}
             handleTicket={handleTicket}
           />
-          <button>Generate My Ticket</button>
+          <button type="submit">Generate My Ticket</button>
         </form>
       ) : (
         <Ticket ticket={ticket} />
