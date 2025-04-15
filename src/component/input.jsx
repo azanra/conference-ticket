@@ -1,6 +1,14 @@
 export default function Input({
-  template = { type: "text", label: "", inputPlaceholder: "" },
+  template = { type: "text", label: "", inputPlaceholder: "", section: "" },
+  ticket,
+  handleTicket,
 }) {
+  function handleInput(e) {
+    handleTicket({
+      ...ticket,
+      [template.section]: e.target.value,
+    });
+  }
   return (
     <div>
       <div>
@@ -14,6 +22,7 @@ export default function Input({
         maxLength="32"
         placeholder={template.inputPlaceholder}
         required
+        onChange={handleInput}
       />
     </div>
   );
