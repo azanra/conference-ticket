@@ -11,7 +11,12 @@ export default function AvatarUpload({ ticket, handleTicket }) {
     <>
       <p>Upload Avatar</p>
       <label htmlFor="">
-        <input type="file" onChange={handleAvatar} />
+        <input
+          type="file"
+          onChange={handleAvatar}
+          required
+          accept=".jpg, .jpeg, .png"
+        />
         <div>
           <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
         </div>
