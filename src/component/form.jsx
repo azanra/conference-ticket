@@ -46,7 +46,11 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
           onSubmit={(e) => {
             e.preventDefault();
             setStatus("finished");
-            const ticketId = generateRandomId(5);
+            const generatedTicketId = generateRandomId(5);
+            handleTicket({
+              ...ticket,
+              ticketId: generatedTicketId,
+            });
           }}
         >
           <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
