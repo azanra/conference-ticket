@@ -1,12 +1,17 @@
 export default function AvatarUpload({ ticket, handleTicket }) {
   function handleAvatar(e) {
     const avatarFile = e.target.files[0];
-    const url = URL.createObjectURL(avatarFile);
-    handleTicket({
-      ...ticket,
-      avatar: url,
-    });
+    if (e.target.files[0].size < 500000) {
+      const url = URL.createObjectURL(avatarFile);
+      handleTicket({
+        ...ticket,
+        avatar: url,
+      });
+    } else {
+      alert("File is too big, choose other picture");
+    }
   }
+
   return (
     <>
       <p>Upload Avatar</p>
