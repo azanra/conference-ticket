@@ -1,5 +1,11 @@
 export default function Input({
-  template = { type: "text", label: "", inputPlaceholder: "", section: "" },
+  template = {
+    type: "text",
+    label: "",
+    inputPlaceholder: "",
+    section: "",
+    title: "",
+  },
   ticket,
   handleTicket,
 }) {
@@ -23,6 +29,7 @@ export default function Input({
         placeholder={template.inputPlaceholder}
         required
         onChange={handleInput}
+        title={template.title}
       />
     </div>
   );

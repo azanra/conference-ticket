@@ -10,18 +10,21 @@ const template = {
     label: "Full Name",
     inputPlaceholder: "",
     section: "fullName",
+    title: "Enter your fullname",
   },
   email: {
     type: "email",
     label: "Email Address",
     inputPlaceholder: "example@email.com",
     section: "email",
+    title: "Enter valid email address",
   },
   github: {
     type: "text",
     label: "GitHub Username",
     inputPlaceholder: "@yourusername",
     section: "githubUsername",
+    title: "Enter your github username",
   },
 };
 
