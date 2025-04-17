@@ -1,4 +1,9 @@
+import { useRef, useState } from "react";
+
 export default function AvatarUpload({ ticket, handleTicket }) {
+  const [isSizeValid, setIsSizeValid] = useState(true);
+  const fileUpload = useRef(null);
+
   function handleAvatar(e) {
     const avatarFile = e.target.files[0];
     if (e.target.files[0].size < 500000) {
@@ -7,8 +12,10 @@ export default function AvatarUpload({ ticket, handleTicket }) {
         ...ticket,
         avatar: url,
       });
+      setIsSizeValid(true);
     } else {
-      alert("File is too big, choose other picture");
+      fileUpload.current.value = "";
+      setIsSizeValid(false);
     }
   }
 
@@ -21,6 +28,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
           onChange={handleAvatar}
           required
           accept=".jpg, .jpeg, .png"
+          ref={fileUpload}
         />
         <div>
           <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
@@ -30,7 +38,9 @@ export default function AvatarUpload({ ticket, handleTicket }) {
       <p>
         <span>
           <img src="../src/assets/images/icon-info.svg" alt="info icon" />
-          Upload your photo (JPG or PNG, max size: 500KB)
+          {isSizeValid === true
+            ? "Upload your photo (JPG OR PNG, max size: 500kb)."
+            : "File too large. Please upload a photo under 500KB"}
         </span>
       </p>
     </>
