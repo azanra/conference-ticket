@@ -8,7 +8,8 @@ const initialTicket = {
   email: "JohnDoe@gmail.com",
   githubUsername: "@johnDoe",
   ticketId: null,
-  date: "01/12/2002",
+  date: "Jan 31, 2025",
+  location: "Austin, TX",
 };
 
 function App() {

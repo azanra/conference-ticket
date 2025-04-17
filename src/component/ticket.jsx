@@ -10,7 +10,9 @@ export default function Ticket({ ticket }) {
           <img src="../src/assets/images/logo-mark.svg" alt="Conference mark" />
           <div>
             <h2>Coding Conf</h2>
-            <p>{ticket.date} / Austin, TX</p>
+            <p>
+              {ticket.date} / {ticket.location}
+            </p>
           </div>
         </div>
         <div>
