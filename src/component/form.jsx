@@ -42,6 +42,9 @@ const generateRandomId = (charAmount) => {
 export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
+      <div className="flex justify-center items-center mb-16">
+        <img src="./src/assets/images/logo-full.svg" alt="Logo images" />
+      </div>
       <div className="flex justify-center items-center text-xl">
         <Header status={status} ticket={ticket} />
       </div>

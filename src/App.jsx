@@ -19,7 +19,7 @@ function App() {
     setTicket(value);
   }
   return (
-    <div className="h-screen w-screen bg-[url(./assets/images/background-desktop.png)] text-white">
+    <div className="h-screen w-screen bg-[url(./assets/images/background-desktop.png)] text-white p-10">
       <Form
         ticket={ticket}
         status={status}
