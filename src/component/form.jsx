@@ -42,7 +42,9 @@ const generateRandomId = (charAmount) => {
 export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
-      <Header status={status} ticket={ticket} />
+      <div className="flex justify-center items-center text-xl">
+        <Header status={status} ticket={ticket} />
+      </div>
       <Body status={status} ticket={ticket} />
       {status === "draft" ? (
         <form
