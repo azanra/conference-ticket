@@ -18,7 +18,8 @@
   --Neutral-900: hsl(248, 70%, 10%);
   --Orange-500: hsl(7, 88%, 67%);
   --Orange-700: hsl(7, 71%, 60%);
-  --Gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  --Gradient-text-first: hsl(7, 86%, 67%);
+  --Gradient-text-second: hsl(0, 0%, 100%);
   --font-size: 20px;
 }
 
@@ -30,4 +31,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fullNameGradient {
+  background-image: linear-gradient(
+    to right,
+    var(--Gradient-text-first),
+    var(--Gradient-text-second)
+  );
+  color: transparent;
+  background-clip: text;
 }

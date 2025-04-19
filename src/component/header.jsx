@@ -1,3 +1,5 @@
+import "../App.css";
+
 export default function Header({ status, ticket }) {
   const { fullName } = ticket;
   if (status === "draft") {
@@ -10,7 +12,8 @@ export default function Header({ status, ticket }) {
   return (
     <>
       <h1 className="text-5xl font-bold text-center">
-        Congrats, <span>{fullName}</span> Your ticket is ready .
+        Congrats, <span className="fullNameGradient">{fullName}! </span>
+        Your ticket is ready.
       </h1>
     </>
   );
