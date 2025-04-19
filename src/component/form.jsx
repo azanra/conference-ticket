@@ -42,13 +42,15 @@ const generateRandomId = (charAmount) => {
 export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
-      <div className="flex justify-center items-center mb-16">
+      <div className="centerComponent mb-16">
         <img src="./src/assets/images/logo-full.svg" alt="Logo images" />
       </div>
-      <div className="flex justify-center items-center text-xl">
+      <div className="centerComponent text-xl mb-5">
         <Header status={status} ticket={ticket} />
       </div>
-      <Body status={status} ticket={ticket} />
+      <div className="centerComponent mb-10 text-xl">
+        <Body status={status} ticket={ticket} />
+      </div>
       {status === "draft" ? (
         <form
           onSubmit={(e) => {

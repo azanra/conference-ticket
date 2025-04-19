@@ -25,3 +25,9 @@
 body {
   font-family: "Inconsolata", var(--system-ui);
 }
+
+.centerComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
