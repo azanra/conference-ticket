@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import "../App.css";
 
 export default function AvatarUpload({ ticket, handleTicket }) {
   const [isSizeValid, setIsSizeValid] = useState(true);
@@ -24,16 +25,19 @@ export default function AvatarUpload({ ticket, handleTicket }) {
       <p>Upload Avatar</p>
       <div
         htmlFor=""
-        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg)"
+        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative"
       >
-        <input
-          type="file"
-          onChange={handleAvatar}
-          required
-          accept=".jpg, .jpeg, .png"
-          ref={fileUpload}
-        />
-        <div>
+        <div className="centerComponent">
+          <input
+            type="file"
+            onChange={handleAvatar}
+            required
+            accept=".jpg, .jpeg, .png"
+            ref={fileUpload}
+            className=""
+          />
+        </div>
+        <div className="centerComponent absolute left-45 top-3">
           <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
         </div>
         <span>Drag and drop or click to upload</span>
