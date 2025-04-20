@@ -43,3 +43,11 @@ body {
   color: transparent;
   background-clip: text;
 }
+
+.customFileInput {
+  color: transparent;
+}
+
+.customFileInput::-webkit-file-upload-button {
+  visibility: hidden;
+}

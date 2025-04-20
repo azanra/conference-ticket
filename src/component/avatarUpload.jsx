@@ -34,11 +34,8 @@ export default function AvatarUpload({ ticket, handleTicket }) {
             required
             accept=".jpg, .jpeg, .png"
             ref={fileUpload}
-            className=""
+            className="customFileInput"
           />
-        </div>
-        <div className="centerComponent absolute left-45 top-3">
-          <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
         </div>
         <span>Drag and drop or click to upload</span>
       </div>
