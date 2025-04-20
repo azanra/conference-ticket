@@ -3,6 +3,7 @@ import Body from "./body.jsx";
 import Header from "./header.jsx";
 import Input from "./input.jsx";
 import Ticket from "./ticket.jsx";
+import "../App.css";
 
 const template = {
   name: {
@@ -63,7 +64,9 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
             });
           }}
         >
-          <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
+          <div className="centerComponent">
+            <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
+          </div>
           <Input
             template={template.name}
             ticket={ticket}

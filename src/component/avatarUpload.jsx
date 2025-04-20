@@ -20,9 +20,12 @@ export default function AvatarUpload({ ticket, handleTicket }) {
   }
 
   return (
-    <>
+    <div>
       <p>Upload Avatar</p>
-      <label htmlFor="">
+      <div
+        htmlFor=""
+        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg)"
+      >
         <input
           type="file"
           onChange={handleAvatar}
@@ -34,7 +37,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
           <img src="../src/assets/images/icon-upload.svg" alt="upload icon" />
         </div>
         <span>Drag and drop or click to upload</span>
-      </label>
+      </div>
       <p>
         <span>
           <img src="../src/assets/images/icon-info.svg" alt="info icon" />
@@ -43,6 +46,6 @@ export default function AvatarUpload({ ticket, handleTicket }) {
             : "File too large. Please upload a photo under 500KB"}
         </span>
       </p>
-    </>
+    </div>
   );
 }
