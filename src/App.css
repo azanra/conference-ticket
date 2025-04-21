@@ -51,3 +51,14 @@ body {
 .customFileInput::-webkit-file-upload-button {
   visibility: hidden;
 }
+
+.customFileInput::before {
+  content: " ";
+  background: no-repeat url("./assets/images/icon-upload.svg");
+  background-position: center;
+  height: 25px;
+  width: 35px;
+  display: inline-block;
+  margin-left: 125px;
+  border: 1px solid var(--Neutral-700);
+}

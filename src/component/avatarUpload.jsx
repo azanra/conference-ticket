@@ -27,7 +27,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
         htmlFor=""
         className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative"
       >
-        <div className="centerComponent">
+        <label className="centerComponent">
           <input
             type="file"
             onChange={handleAvatar}
@@ -36,7 +36,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
             ref={fileUpload}
             className="customFileInput"
           />
-        </div>
+        </label>
         <span>Drag and drop or click to upload</span>
       </div>
       <p>
