@@ -25,7 +25,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
       <p>Upload Avatar</p>
       <div
         htmlFor=""
-        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative"
+        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative w-[400px]"
       >
         <label className="centerComponent">
           <input
@@ -39,9 +39,13 @@ export default function AvatarUpload({ ticket, handleTicket }) {
         </label>
         <span className="ml-12.5">Drag and drop or click to upload</span>
       </div>
-      <div className="mt-5 flex">
+      <div className="mt-3 flex items-center">
         <img src="../src/assets/images/icon-info.svg" alt="info icon" />
-        <span>
+        <span
+          className={`text-xs ml-3 ${
+            isSizeValid ? "text-(--Neutral-500)" : "text-(--Orange-500)"
+          }`}
+        >
           {isSizeValid === true
             ? "Upload your photo (JPG OR PNG, max size: 500kb)."
             : "File too large. Please upload a photo under 500KB"}
