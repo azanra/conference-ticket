@@ -37,16 +37,16 @@ export default function AvatarUpload({ ticket, handleTicket }) {
             className="customFileInput"
           />
         </label>
-        <span>Drag and drop or click to upload</span>
+        <span className="ml-12.5">Drag and drop or click to upload</span>
       </div>
-      <p>
+      <div className="mt-5 flex">
+        <img src="../src/assets/images/icon-info.svg" alt="info icon" />
         <span>
-          <img src="../src/assets/images/icon-info.svg" alt="info icon" />
           {isSizeValid === true
             ? "Upload your photo (JPG OR PNG, max size: 500kb)."
             : "File too large. Please upload a photo under 500KB"}
         </span>
-      </p>
+      </div>
     </div>
   );
 }
