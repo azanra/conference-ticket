@@ -16,21 +16,24 @@ export default function Input({
     });
   }
   return (
-    <div>
+    <div className="w-[400px]">
       <div>
         <label htmlFor="input">{template.label}</label>
       </div>
-      <input
-        type={template.type}
-        id="input"
-        name={template.label}
-        minLength="4"
-        maxLength="32"
-        placeholder={template.inputPlaceholder}
-        required
-        onChange={handleInput}
-        title={template.title}
-      />
+      <div>
+        <input
+          type={template.type}
+          id="input"
+          name={template.label}
+          minLength="4"
+          maxLength="32"
+          placeholder={template.inputPlaceholder}
+          required
+          onChange={handleInput}
+          title={template.title}
+          className="inputElement"
+        />
+      </div>
     </div>
   );
 }

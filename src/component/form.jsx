@@ -67,21 +67,27 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
           <div className="centerComponent">
             <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
           </div>
-          <Input
-            template={template.name}
-            ticket={ticket}
-            handleTicket={handleTicket}
-          />
-          <Input
-            template={template.email}
-            ticket={ticket}
-            handleTicket={handleTicket}
-          />
-          <Input
-            template={template.github}
-            ticket={ticket}
-            handleTicket={handleTicket}
-          />
+          <div className="centerComponent">
+            <Input
+              template={template.name}
+              ticket={ticket}
+              handleTicket={handleTicket}
+            />
+          </div>
+          <div className="centerComponent">
+            <Input
+              template={template.email}
+              ticket={ticket}
+              handleTicket={handleTicket}
+            />
+          </div>
+          <div className="centerComponent">
+            <Input
+              template={template.github}
+              ticket={ticket}
+              handleTicket={handleTicket}
+            />
+          </div>
           <button type="submit">Generate My Ticket</button>
         </form>
       ) : (
