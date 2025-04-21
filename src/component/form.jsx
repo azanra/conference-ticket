@@ -64,7 +64,7 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
             });
           }}
         >
-          <div className="centerComponent">
+          <div className="centerComponent mb-5">
             <AvatarUpload ticket={ticket} handleTicket={handleTicket} />
           </div>
           <div className="centerComponent">

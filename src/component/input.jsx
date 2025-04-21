@@ -16,8 +16,8 @@ export default function Input({
     });
   }
   return (
-    <div className="w-[400px]">
-      <div>
+    <div className="w-[400px] mb-5">
+      <div className="mb-3">
         <label htmlFor="input">{template.label}</label>
       </div>
       <div>

@@ -69,6 +69,8 @@ body {
 .inputElement {
   border: 1px solid var(--Neutral-700);
   background-color: var(--input-bg);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
+  padding: 5px 10px;
+  height: 50px;
 }
