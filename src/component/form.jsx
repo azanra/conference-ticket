@@ -88,7 +88,14 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
               handleTicket={handleTicket}
             />
           </div>
-          <button type="submit">Generate My Ticket</button>
+          <div className="centerComponent mt-5">
+            <button
+              type="submit"
+              className="w-[400px] h-[50px] bg-(--Orange-700) rounded-xl text-(--Neutral-900) font-extrabold"
+            >
+              Generate My Ticket
+            </button>
+          </div>
         </form>
       ) : (
         <Ticket ticket={ticket} />
