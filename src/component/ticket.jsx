@@ -1,10 +1,8 @@
+import "../App.css";
+
 export default function Ticket({ ticket }) {
   return (
-    <div
-      style={{
-        backgroundImage: 'url("../src/assets/images/pattern-ticket.svg")',
-      }}
-    >
+    <div className="centerComponent ticketBg">
       <div>
         <div>
           <img src="../src/assets/images/logo-mark.svg" alt="Conference mark" />
