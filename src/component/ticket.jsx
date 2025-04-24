@@ -3,7 +3,7 @@ import "../App.css";
 export default function Ticket({ ticket }) {
   return (
     <div className="centerComponent ticketBg">
-      <div>
+      <div className="w-[600px] h-[225px]">
         <div className="flex">
           <img src="../src/assets/images/logo-mark.svg" alt="Conference mark" />
           <div>
@@ -31,9 +31,7 @@ export default function Ticket({ ticket }) {
           </div>
         </div>
       </div>
-      <div>
-        <p>{ticket.ticketId}</p>
-      </div>
+      <p className="absolute right-50 rotate-90">{ticket.ticketId}</p>
     </div>
   );
 }
