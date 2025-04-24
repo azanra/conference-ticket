@@ -4,7 +4,7 @@ export default function Ticket({ ticket }) {
   return (
     <div className="centerComponent ticketBg">
       <div>
-        <div>
+        <div className="flex">
           <img src="../src/assets/images/logo-mark.svg" alt="Conference mark" />
           <div>
             <h2>Coding Conf</h2>
@@ -13,11 +13,15 @@ export default function Ticket({ ticket }) {
             </p>
           </div>
         </div>
-        <div>
-          <img src={ticket.avatar} alt="Person image" />
+        <div className="flex h-[100px]">
+          <img
+            src={ticket.avatar}
+            alt="Person image"
+            className="h-auto max-w-full"
+          />
           <div>
-            <h2>{ticket.fullname}</h2>
-            <div>
+            <h2>{ticket.fullName}</h2>
+            <div className="flex">
               <img
                 src="../src/assets/images/icon-github.svg"
                 alt="Github icon"

@@ -13,7 +13,7 @@ const initialTicket = {
 };
 
 function App() {
-  const [status, setStatus] = useState("drafts");
+  const [status, setStatus] = useState("draft");
   const [ticket, setTicket] = useState(initialTicket);
   function handleTicket(value) {
     setTicket(value);
