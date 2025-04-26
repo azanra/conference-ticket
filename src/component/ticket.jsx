@@ -3,11 +3,15 @@ import "../App.css";
 export default function Ticket({ ticket }) {
   return (
     <div className="centerComponent ticketBg">
-      <div className="w-[600px] h-[225px]">
+      <div className="w-[600px] h-[250px]">
         <div className="flex">
-          <img src="../src/assets/images/logo-mark.svg" alt="Conference mark" />
+          <img
+            src="../src/assets/images/logo-mark.svg"
+            alt="Conference mark"
+            className="pl-6 pt-2 pr-6 w-[90px] h-[80px]"
+          />
           <div>
-            <h2>Coding Conf</h2>
+            <h2 className="text-4xl pt-4 pb-4">Coding Conf</h2>
             <p>
               {ticket.date} / {ticket.location}
             </p>
