@@ -35,7 +35,7 @@ export default function Ticket({ ticket }) {
           </div>
         </div>
       </div>
-      <p className="absolute right-50 rotate-90">{ticket.ticketId}</p>
+      <p className="absolute right-173 rotate-90">{ticket.ticketId}</p>
     </div>
   );
 }
