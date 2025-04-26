@@ -11,26 +11,26 @@ export default function Ticket({ ticket }) {
             className="pl-6 pt-2 pr-6 w-[90px] h-[80px]"
           />
           <div>
-            <h2 className="text-4xl pt-4 pb-4">Coding Conf</h2>
+            <h2 className="text-4xl pt-4 pb-4 font-bold">Coding Conf</h2>
             <p>
               {ticket.date} / {ticket.location}
             </p>
           </div>
         </div>
-        <div className="flex h-[100px]">
+        <div className="flex h-[100px] mt-12">
           <img
             src={ticket.avatar}
             alt="Person image"
-            className="h-auto max-w-full"
+            className="h-auto max-w-full pl-6 pr-6 rounded-[20px]"
           />
           <div>
-            <h2>{ticket.fullName}</h2>
+            <h2 className="text-3xl mb-2">{ticket.fullName}</h2>
             <div className="flex">
               <img
                 src="../src/assets/images/icon-github.svg"
                 alt="Github icon"
               />
-              <p>{ticket.githubUsername}</p>
+              <p className="text-lg ml-2">@{ticket.githubUsername}</p>
             </div>
           </div>
         </div>
