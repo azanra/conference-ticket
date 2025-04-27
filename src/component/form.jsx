@@ -91,7 +91,7 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
           <div className="centerComponent mt-5">
             <button
               type="submit"
-              className="w-[400px] h-[50px] bg-(--Orange-700) rounded-xl text-(--Neutral-900) font-extrabold"
+              className="w-[400px] h-[50px] bg-(--Orange-700) rounded-xl text-(--Neutral-900) font-extrabold hover:bg-(--hoverBtn)"
             >
               Generate My Ticket
             </button>

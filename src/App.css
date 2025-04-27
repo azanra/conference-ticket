@@ -16,9 +16,11 @@
   --Neutral-500: hsl(245, 15%, 58%);
   --Neutral-700: hsl(245, 19%, 35%);
   --input-bg: hsl(245, 19%, 35%, 0.25);
+  --hover-bg: hsl(245, 19%, 35%, 0.5);
   --Neutral-900: hsl(248, 70%, 10%);
   --Orange-500: hsl(7, 88%, 67%);
   --Orange-700: hsl(7, 71%, 60%);
+  --hoverBtn: hsl(7, 59%, 63%);
   --Gradient-text-first: hsl(7, 86%, 67%);
   --Gradient-text-second: hsl(0, 0%, 100%);
   --font-size: 20px;
@@ -83,6 +85,10 @@ body {
   width: 100%;
   padding: 5px 10px;
   height: 50px;
+}
+
+.inputElement:hover {
+  background-color: var(--hover-bg);
 }
 
 .ticketBg {

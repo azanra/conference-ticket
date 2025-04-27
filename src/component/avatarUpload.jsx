@@ -25,7 +25,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
       <p className="mb-3">Upload Avatar</p>
       <div
         htmlFor=""
-        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative w-[400px]"
+        className="border-2 border-dashed border-(--Neutral-500) bg-(--input-bg) p-4 relative w-[400px] hover:bg-(--hover-bg)"
       >
         <label className="centerComponent">
           <input
