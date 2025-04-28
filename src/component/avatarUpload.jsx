@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "../App.css";
+import LogoInfo from "../assets/images/icon-info.svg";
 
 export default function AvatarUpload({ ticket, handleTicket }) {
   const [isSizeValid, setIsSizeValid] = useState(true);
@@ -40,7 +41,7 @@ export default function AvatarUpload({ ticket, handleTicket }) {
         <span className="ml-12.5">Drag and drop or click to upload</span>
       </div>
       <div className="mt-3 flex items-center">
-        <img src="./src/assets/images/icon-info.svg" alt="info icon" />
+        <img src={LogoInfo} alt="info icon" />
         <span
           className={`text-xs ml-3 ${
             isSizeValid ? "text-(--Neutral-500)" : "text-(--Orange-500)"

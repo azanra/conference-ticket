@@ -4,6 +4,7 @@ import Header from "./header.jsx";
 import Input from "./input.jsx";
 import Ticket from "./ticket.jsx";
 import "../App.css";
+import LogoFull from "../assets/images/logo-full.svg";
 
 const template = {
   name: {
@@ -44,7 +45,7 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
       <div className="centerComponent mb-16">
-        <img src="src/assets/images/logo-full.svg" alt="Logo images" />
+        <img src={LogoFull} alt="Logo images" />
       </div>
       <div className="centerComponent text-xl mb-5">
         <Header status={status} ticket={ticket} />

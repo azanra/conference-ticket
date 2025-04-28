@@ -1,4 +1,6 @@
 import "../App.css";
+import LogoMark from "../assets/images/logo-mark.svg";
+import LogoGit from "../assets/images/icon-github.svg";
 
 export default function Ticket({ ticket }) {
   return (
@@ -6,7 +8,7 @@ export default function Ticket({ ticket }) {
       <div className="w-[600px] h-[250px]">
         <div className="flex">
           <img
-            src="../src/assets/images/logo-mark.svg"
+            src={LogoMark}
             alt="Conference mark"
             className="pl-6 pt-2 pr-6 w-[90px] h-[80px]"
           />
@@ -26,10 +28,7 @@ export default function Ticket({ ticket }) {
           <div>
             <h2 className="text-3xl mb-2">{ticket.fullName}</h2>
             <div className="flex">
-              <img
-                src="../src/assets/images/icon-github.svg"
-                alt="Github icon"
-              />
+              <img src={LogoGit} alt="Github icon" />
               <p className="text-lg ml-2">@{ticket.githubUsername}</p>
             </div>
           </div>
