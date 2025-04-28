@@ -44,7 +44,7 @@ export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
       <div className="centerComponent mb-16">
-        <img src="./src/assets/images/logo-full.svg" alt="Logo images" />
+        <img src="src/assets/images/logo-full.svg" alt="Logo images" />
       </div>
       <div className="centerComponent text-xl mb-5">
         <Header status={status} ticket={ticket} />
