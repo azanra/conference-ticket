@@ -44,7 +44,6 @@ const generateRandomId = (charAmount) => {
 export default function Form({ ticket, status, handleTicket, setStatus }) {
   return (
     <>
-      test deploy
       <div className="centerComponent mb-16">
         <img src={LogoFull} alt="Logo images" />
       </div>
